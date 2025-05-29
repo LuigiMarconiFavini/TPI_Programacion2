@@ -101,3 +101,50 @@ textarea:focus {
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
   outline: none;
 }
+
+/* Tabla del carrito */
+table.carrito {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table.carrito th,
+table.carrito td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: center;
+}
+
+table.carrito th {
+  background-color: #007BFF;
+  color: white;
+}
+
+table.carrito tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table.carrito tfoot td {
+  background-color: #e0e0e0;
+  font-weight: bold;
+}
+
+/* Botón de compra */
+button {
+  margin-top: 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+

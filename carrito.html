@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Carrito de Compras - Fábrica Natalia</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header>
         <!-- Logo, título, botón de login -->
+        <h1>Fábrica de Pastas Natalia</h1>
     </header>
 
     <nav>
@@ -23,6 +24,44 @@
 
     <main>
         <!-- Contenido específico de esta página -->
+        <h2>Carrito de Compras</h2>
+        <table class="carrito">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unitario</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ravioles de ricota</td>
+                    <td>2</td>
+                    <td>$1500</td>
+                    <td>$3000</td>
+                </tr>
+                <tr>
+                    <td>Tallarines</td>
+                    <td>1</td>
+                    <td>$1200</td>
+                    <td>$1200</td>
+                </tr>
+                <tr>
+                    <td>Sorrentinos de jamón y queso</td>
+                    <td>3</td>
+                    <td>$1800</td>
+                    <td>$5400</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3"><strong>Total</strong></td>
+                    <td><strong>$9600</strong></td>
+                </tr>
+            </tfoot>
+        </table>
+        <button>Finalizar compra</button>
     </main>
 
     <footer>
