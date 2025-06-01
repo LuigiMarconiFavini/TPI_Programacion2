@@ -4,16 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Productos</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="icon" href="./img/icono_fav.ico" type="image/ico">
     <link rel="icon" href="./img/icono_fav.ico" type="image/ico">
 </head>
 
 <body>
     <header>
-        <div class="frutas-animadas"></div> <!-- 🍎 Fondo animado -->
+        <div class="frutas-animadas"></div> <!-- Fondo animado -->
         <div class="logo-title">
             <img src="./img/icono.png" alt="Logo de la empresa">
             <h1 class="empresa-nombre">
@@ -43,7 +42,6 @@
     </header>
 
     <nav>
-        <!-- Menú de navegación entre páginas -->
         <a href="index.html">Inicio</a>
         <a href="login.html">Login</a>
         <a href="productos.html">Productos</a>
@@ -51,41 +49,69 @@
         <a href="contactos.html">Contacto</a>
     </nav>
 
+    <h1>Nuestros Árboles Frutales</h1>
     <main>
-
-        <form id="loginForm" novalidate>
-            <h2>
-                <svg class="letra-arbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 100" width="30" height="40"
-                    style="vertical-align:middle; margin-right:8px;">
-                    <g class="animar-arbol">
-                        <circle cx="32" cy="20" r="30" fill="#4CAF50" />
-                        <circle cx="22" cy="28" r="12" fill="#66BB6A" />
-                        <circle cx="42" cy="28" r="12" fill="#66BB6A" />
-                        <rect x="28" y="40" width="8" height="50" rx="2" fill="#000000" />
-                    </g>
-                </svg>
-                Iniciar Sesión
-            </h2>
-
-
-            <div class="form-group">
-                <label for="email">Correo Electrónico:</label><br>
-                <input type="email" id="email" name="email" required>
-                <div class="error" id="emailError"></div>
+        <div class="productos">
+            <div class="producto">
+                <img src="img/manzana.jpg" alt="Árbol de Manzana">
+                <h3>Árbol de Manzana</h3>
+                <p>Ideal para climas templados. Produce manzanas dulces y jugosas.</p>
+                <button class="agregar-carrito" data-nombre="Árbol de Manzana" data-precio="25000"
+                    data-imagen="img/manzana.jpg">
+                    Agregar al carrito
+                </button>
+                <br>
+                <h4>$25000</h4>
             </div>
-            <br>
 
-            <div class="form-group">
-                <label for="password">Contraseña:</label><br>
-                <input type="password" id="password" name="password" required minlength="6">
-                <div class="error" id="passwordError"></div>
+            <div class="producto">
+                <img src="img/pera.jpg" alt="Árbol de Pera">
+                <h3>Árbol de Pera</h3>
+                <p>Produce peras verdes y amarillas. De crecimiento rápido.</p>
+                <button class="agregar-carrito" data-nombre="Árbol de Pera" data-precio="23000"
+                    data-imagen="img/pera.jpg">
+                    Agregar al carrito
+                </button>
+                <br>
+                <h4>$23000</h4>
             </div>
-            <br>
 
-            <button type="submit">Ingresar</button>
+            <div class="producto">
+                <img src="img/durazno.jpg" alt="Árbol de Durazno">
+                <h3>Árbol de Durazno</h3>
+                <p>Excelente para jardines pequeños. Fruta aromática y carnosa.</p>
+                <button class="agregar-carrito" data-nombre="Árbol de Durazno" data-precio="24000"
+                    data-imagen="img/durazno.jpg">
+                    Agregar al carrito
+                </button>
+                <br>
+                <h4>$24000</h4>
+            </div>
 
-            <div id="formMessages"></div>
-        </form>
+            <div class="producto">
+                <img src="img/naranja.jpg" alt="Árbol de Naranja">
+                <h3>Árbol de Naranja</h3>
+                <p>Produce naranjas jugosas, perfectas para jugos naturales.</p>
+                <button class="agregar-carrito" data-nombre="Árbol de Naranja" data-precio="26000"
+                    data-imagen="img/naranja.jpg">
+                    Agregar al carrito
+                </button>
+                <br>
+                <h4>$26000</h4>
+            </div>
+
+            <div class="producto">
+                <img src="img/mandarina.jpg" alt="Árbol de Mandarina">
+                <h3>Árbol de Mandarina</h3>
+                <p>Fruto dulce y fácil de pelar. Muy resistente a plagas y heladas.</p>
+                <button class="agregar-carrito" data-nombre="Árbol de Mandarina" data-precio="22000"
+                    data-imagen="img/mandarina.jpg">
+                    Agregar al carrito
+                </button>
+                <br>
+                <h4>$22000</h4>
+            </div>
+        </div>
 
     </main>
 
@@ -94,8 +120,7 @@
         <p>Dirección: Zeballos 1341, Rosario - Santa Fe - Tel: (0341) 5555-1234</p>
         <p>Email: contacto@frutalesdelnorte.com.ar</p>
     </footer>
-
-    <script src="js/login.js"></script>
+    <script src="js/productos.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const contenedor = document.querySelector(".frutas-animadas");
@@ -112,6 +137,7 @@
             }
         });
     </script>
+
 </body>
 
 </html>

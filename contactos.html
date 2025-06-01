@@ -2,32 +2,164 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="icon" href="./img/icono_fav.ico" type="image/ico">
 </head>
 
 <body>
     <header>
-        <!-- Logo, título, botón de login -->
+        <div class="frutas-animadas"></div> <!-- 🍎 Fondo animado -->
+        <div class="logo-title">
+            <img src="./img/icono.png" alt="Logo de la empresa" />
+            <h1 class="empresa-nombre">
+                Fruta
+                <!-- Árbol más atractivo como "l" -->
+                <svg class="letra-arbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 100" width="28" height="40">
+                    <g class="animar-arbol">
+                        <!-- Copa del árbol -->
+                        <circle cx="32" cy="20" r="30" fill="#4CAF50" />
+                        <circle cx="22" cy="28" r="12" fill="#66BB6A" />
+                        <circle cx="42" cy="28" r="12" fill="#66BB6A" />
+                        <!-- Tronco del árbol -->
+                        <rect x="28" y="40" width="8" height="50" rx="2" fill="#000000" />
+                    </g>
+                </svg>
+                es del Norte
+            </h1>
+        </div>
+
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
     </header>
 
     <nav>
-        <!-- Menú de navegación entre páginas -->
         <a href="index.html">Inicio</a>
         <a href="login.html">Login</a>
+        <a href="productos.html">Productos</a>
         <a href="carrito.html">Carrito</a>
         <a href="contactos.html">Contacto</a>
     </nav>
 
     <main>
-        <!-- Contenido específico de esta página -->
+        <h2>Contáctanos</h2>
+        <p>
+            Si tienes alguna pregunta o necesitas más información, por favor
+            completa el siguiente formulario y nos pondremos en contacto contigo
+            lo antes posible.
+        </p>
+        <br>
+        <hr>
+        <br>
+
+        <div class="contenedor-form-mapa">
+            <form id="contactForm" novalidate>
+                <div class="form-group">
+                    <label for="name">Nombre Completo:</label><br />
+                    <input type="text" id="name" name="name" required />
+                    <div class="error" id="nameError"></div>
+                </div>
+                <br>
+
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label><br />
+                    <input type="email" id="email" name="email" required />
+                    <div class="error" id="emailError"></div>
+                </div>
+                <br>
+
+                <div class="form-group">
+                    <label for="iva">Condicion IVA</label>
+                    <select name="iva" id="iva" required aria-required="true">
+                        <option value="">Seleccione...</option>
+                        <option value="Resp.Inscr.">Responsable Inscripto</option>
+                        <option value="Consf. Final">Consumidor Final</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                    <div class="error" id="errorIva"></div>
+                </div>
+                <br>
+
+                <div class="form-group">
+                    <legend>¿Condicion de compra?</legend>
+                    <label>
+                        <input type="radio" name="condicion" value="minorista" />Minorista
+                    </label>
+                    <label>
+                        <input type="radio" name="condicion" value="mayorista" />Mayorista
+                    </label>
+                    <div class="error" id="errorCondicion"></div>
+                </div>
+                <br />
+
+                <div class="form-group">
+                    <label for="subject">Asunto:</label><br />
+                    <input type="text" id="subject" name="subject" required />
+                    <div class="error" id="subjectError"></div>
+                </div>
+                <br>
+
+                <div class="form-group">
+                    <label for="message">Mensaje:</label>
+                    <br>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <div class="error" id="messageError"></div>
+                </div>
+                <br>
+
+                <div>
+                    <button type="submit">Enviar Mensaje</button>
+                </div>
+                <br>
+                <div id="formMessages"></div>
+                <br>
+            </form>
+
+            <div class="mapa">
+                <h2>Encuéntranos en:</h2>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6695.866588354087!2d-60.64561686514282!3d-32.95277051713798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7ab11d0eb49c3%3A0x11f1d3d54f950dd0!2sUniversidad%20Tecnol%C3%B3gica%20Nacional%20%7C%20Facultad%20Regional%20Rosario!5e0!3m2!1ses-419!2sar!4v1748623046283!5m2!1ses-419!2sar"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+
+        <br>
+        <hr>
     </main>
 
     <footer>
-        <!-- Información de contacto, derechos, redes -->
+        <p>&copy; 2025 Frutales del Norte. Todos los derechos reservados.</p>
+        <p>Dirección: Zeballos 1341, Rosario - Santa Fe - Tel: (0341) 5555-1234</p>
+        <p>Email: contacto@frutalesdelnorte.com.ar</p>
     </footer>
+
+    <script src="./js/contacto.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const contenedor = document.querySelector(".frutas-animadas");
+            const frutas = ["🍎", "🍐", "🍊", "🍑", "🍒", "🍓"];
+            const cantidad = 20;
+
+            for (let i = 0; i < cantidad; i++) {
+                const fruta = document.createElement("span");
+                fruta.innerText = frutas[Math.floor(Math.random() * frutas.length)];
+                fruta.style.left = Math.random() * 100 + "vw";
+                fruta.style.animationDelay = Math.random() * 10 + "s";
+                fruta.style.fontSize = Math.random() * 20 + 20 + "px";
+                contenedor.appendChild(fruta);
+            }
+        });
+    </script>
 </body>
 
 </html>

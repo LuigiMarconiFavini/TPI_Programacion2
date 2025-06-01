@@ -1,36 +1,148 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio - Frutales del Norte</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="icon" href="./img/icono_fav.ico" type="image/x-icon" />
 </head>
 
 <body>
+
     <header>
-        <!-- Logo, título, botón de login -->
+        <div class="frutas-animadas"></div> <!-- 🍎 Fondo animado -->
+        <div class="logo-title">
+            <img src="./img/icono.png" alt="Logo de la empresa" />
+            <h1 class="empresa-nombre">
+                Fruta
+                <svg class="letra-arbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 100" width="28" height="40">
+                    <g class="animar-arbol">
+                        <circle cx="32" cy="20" r="30" fill="#4CAF50" />
+                        <circle cx="22" cy="28" r="12" fill="#66BB6A" />
+                        <circle cx="42" cy="28" r="12" fill="#66BB6A" />
+                        <rect x="28" y="40" width="8" height="50" rx="2" fill="#000000" />
+                    </g>
+                </svg>
+                es del Norte
+            </h1>
+        </div>
+
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
     </header>
 
     <nav>
-        <!-- Menú de navegación entre páginas -->
         <a href="index.html">Inicio</a>
         <a href="login.html">Login</a>
+        <a href="productos.html">Productos</a>
         <a href="carrito.html">Carrito</a>
         <a href="contactos.html">Contacto</a>
     </nav>
 
+    <!-- Hero principal con fondo e introducción -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>🌳 Bienvenidos a Frutales del Norte</h2>
+            <p>Los mejores árboles frutales para tu jardín, con asesoramiento profesional y envío a todo el país.</p>
+            <a href="productos.html" class="btn-principal">Ver Productos</a>
+        </div>
+    </section>
+
     <main>
-        <!-- Contenido específico de esta página -->
+
+        <!-- Sobre Nosotros -->
+        <div class="container-sobre_nosotros">
+            <h2>🌱 Sobre Nosotros</h2>
+            <p>Nos apasiona la agricultura y ofrecemos árboles frutales sanos, resistentes y adaptados al clima
+                argentino. Más de 20 años de experiencia nos respaldan.</p>
+        </div>
+
+        <!-- Sección de destacados -->
+        <section class="destacados">
+            <div class="destacado">
+                <i class="fas fa-seedling fa-2x"></i>
+                <h3>Variedad</h3>
+                <p>Amplia selección de especies frutales: manzanos, perales, duraznos, naranjos y más.</p>
+            </div>
+            <div class="destacado">
+                <i class="fas fa-hand-holding-heart fa-2x"></i>
+                <h3>Atención personalizada</h3>
+                <p>Te ayudamos a elegir el árbol ideal según tu zona y necesidades.</p>
+            </div>
+            <div class="destacado">
+                <i class="fas fa-truck fa-2x"></i>
+                <h3>Envíos seguros</h3>
+                <p>Embalaje especializado para que tus plantas lleguen perfectas.</p>
+            </div>
+        </section>
+
+        <!-- Galería de imágenes -->
+        <section class="galeria">
+            <h2>📸 Nuestra Producción</h2>
+            <div class="galeria-imagenes">
+                <img src="./img/durazno_arbol.jpg" alt="Plantación 1">
+                <img src="./img/mandarina_arbol.jpg" alt="Plantación 2">
+                <img src="./img/manzana_arbol.jpg" alt="Plantación 3">
+            </div>
+        </section>
+
+        <!-- Noticias, envíos y métodos de pago -->
+        <div class="container-noticias">
+            <h2>📰 Noticias</h2>
+            <p>¡Nuevas variedades disponibles! Seguimos innovando para vos. Ahora también ofrecemos árboles en maceta.
+            </p>
+        </div>
+
+        <div class="container-envios">
+            <h2>🚚 Envíos</h2>
+            <p>Enviamos a todo el país. Productos bien embalados y seguros. Elegí envío estándar o exprés.</p>
+        </div>
+
+        <div class="container-metodos_pago">
+            <h2>💳 Métodos de Pago</h2>
+            <p>Tarjetas, transferencias o efectivo. Todo seguro y adaptado a vos.</p>
+        </div>
+
+        <!-- Llamado a la acción -->
+        <section class="cta">
+            <h2>🌿 ¡Transformá tu jardín hoy!</h2>
+            <p>Visitá nuestra tienda y elegí el árbol perfecto para vos.</p>
+            <a href="productos.html" class="btn-principal">Explorar Catálogo</a>
+        </section>
+
     </main>
 
     <footer>
-        <!-- Información de contacto, derechos, redes -->
-        <p>&copy; 2025 Fábrica de Pastas Natalia. Todos los derechos reservados.</p>
-        <p>Dirección: Av. Italia 1234, Buenos Aires - Tel: (011) 5555-1234</p>
-        <p>Email: contacto@fabricanatalia.com.ar</p>
+        <p>&copy; 2025 Frutales del Norte. Todos los derechos reservados.</p>
+        <p>Dirección: Zeballos 1341, Rosario - Santa Fe | Tel: (0341) 5555-1234 | contacto@frutalesdelnorte.com.ar</p>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const contenedor = document.querySelector(".frutas-animadas");
+            const frutas = ["🍎", "🍐", "🍊", "🍑", "🍒", "🍓"];
+            const cantidad = 20;
+
+            for (let i = 0; i < cantidad; i++) {
+                const fruta = document.createElement("span");
+                fruta.innerText = frutas[Math.floor(Math.random() * frutas.length)];
+                fruta.style.left = Math.random() * 100 + "vw";
+                fruta.style.animationDelay = Math.random() * 10 + "s";
+                fruta.style.fontSize = Math.random() * 20 + 20 + "px";
+                contenedor.appendChild(fruta);
+            }
+        });
+    </script>
+
+
 </body>
 
 </html>

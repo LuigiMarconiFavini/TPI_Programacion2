@@ -2,74 +2,91 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito de Compras - Fábrica Natalia</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Carrito de pedido</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="icon" href="./img/icono_fav.ico" type="image/ico">
 </head>
 
 <body>
     <header>
-        <!-- Logo, título, botón de login -->
-        <h1>Fábrica de Pastas Natalia</h1>
+        <div class="frutas-animadas"></div> <!-- 🍎 Fondo animado -->
+        <div class="logo-title">
+            <img src="./img/icono.png" alt="Logo de la empresa">
+            <h1 class="empresa-nombre">
+                Fruta
+                <!-- Árbol más atractivo como "l" -->
+                <svg class="letra-arbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 100" width="28" height="40">
+                    <g class="animar-arbol">
+                        <!-- Copa del árbol -->
+                        <circle cx="32" cy="20" r="30" fill="#4CAF50" />
+                        <circle cx="22" cy="28" r="12" fill="#66BB6A" />
+                        <circle cx="42" cy="28" r="12" fill="#66BB6A" />
+                        <!-- Tronco del árbol -->
+                        <rect x="28" y="40" width="8" height="50" rx="2" fill="#000000" />
+                    </g>
+                </svg>
+                es del Norte
+            </h1>
+        </div>
+
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
     </header>
 
     <nav>
-        <!-- Menú de navegación entre páginas -->
         <a href="index.html">Inicio</a>
         <a href="login.html">Login</a>
+        <a href="productos.html">Productos</a>
         <a href="carrito.html">Carrito</a>
         <a href="contactos.html">Contacto</a>
     </nav>
 
-    <main>
-        <!-- Contenido específico de esta página -->
-        <h2>Carrito de Compras</h2>
-        <table class="carrito">
-            <thead>
-                <tr>
-                    <th>Producto</th>
-                    <th>Cantidad</th>
-                    <th>Precio Unitario</th>
-                    <th>Subtotal</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Ravioles de ricota</td>
-                    <td>2</td>
-                    <td>$1500</td>
-                    <td>$3000</td>
-                </tr>
-                <tr>
-                    <td>Tallarines</td>
-                    <td>1</td>
-                    <td>$1200</td>
-                    <td>$1200</td>
-                </tr>
-                <tr>
-                    <td>Sorrentinos de jamón y queso</td>
-                    <td>3</td>
-                    <td>$1800</td>
-                    <td>$5400</td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="3"><strong>Total</strong></td>
-                    <td><strong>$9600</strong></td>
-                </tr>
-            </tfoot>
-        </table>
-        <button>Finalizar compra</button>
+    <main class="carrito-container">
+        <h2>Tu Carrito</h2>
+
+        <div id="carritoItems">
+            <!-- Aquí se cargan los productos dinámicamente -->
+        </div>
+
+        <div class="carrito-total" id="totalCarrito">
+            Total: $0
+        </div>
+        <br>
+        <button id="btn-comprar">Comprar</button>
+        <button id="btn-limpiar">Vaciar carrito</button>
     </main>
 
     <footer>
-        <!-- Información de contacto, derechos, redes -->
-        <p>&copy; 2025 Fábrica de Pastas Natalia. Todos los derechos reservados.</p>
-        <p>Dirección: Av. Italia 1234, Buenos Aires - Tel: (011) 5555-1234</p>
-        <p>Email: contacto@fabricanatalia.com.ar</p>
+        <p>&copy; 2025 Frutales del Norte. Todos los derechos reservados.</p>
+        <p>Dirección: Zeballos 1341, Rosario - Santa Fe - Tel: (0341) 5555-1234</p>
+        <p>Email: contacto@frutalesdelnorte.com.ar</p>
     </footer>
+
+    <script src="js/carrito.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const contenedor = document.querySelector(".frutas-animadas");
+            const frutas = ["🍎", "🍐", "🍊", "🍑", "🍒", "🍓"];
+            const cantidad = 20;
+
+            for (let i = 0; i < cantidad; i++) {
+                const fruta = document.createElement("span");
+                fruta.innerText = frutas[Math.floor(Math.random() * frutas.length)];
+                fruta.style.left = Math.random() * 100 + "vw";
+                fruta.style.animationDelay = Math.random() * 10 + "s";
+                fruta.style.fontSize = Math.random() * 20 + 20 + "px";
+                contenedor.appendChild(fruta);
+            }
+        });
+    </script>
 </body>
 
 </html>
