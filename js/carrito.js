@@ -3,6 +3,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const contenedorCarrito = document.getElementById("carritoItems");
     const textoTotalCarrito = document.getElementById("totalCarrito");
     const botonLimpiar = document.getElementById("btn-limpiar");
+    const botonComprar = document.getElementById("btn-comprar");
+
+    botonComprar.addEventListener("click", function () {
+        alert("¡Compra Exitosa!");
+    });
 
     // Cargar carrito desde localStorage o iniciar como arreglo vacío
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
